@@ -1,0 +1,14 @@
+kafka:
+  bootstrap_servers: "pkc-xxxxx.us-east1.gcp.confluent.cloud:9092"
+  topic: "user_events"
+  security_protocol: "SASL_SSL"
+  sasl_mechanism: "PLAIN"
+
+storage:
+  bronze_path: "/Volumes/workspace/default/my_volume/data/kafka_output"
+  checkpoints_root: "/Volumes/workspace/default/my_volume/checkpoints"
+
+anomaly:
+  click_window: "10 seconds"
+  watermark: "1 minute"
+  ip_click_threshold: 4
